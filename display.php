@@ -93,6 +93,7 @@ else
  echo "no user found";
 }
 ?>
+<form action="student.php" id="stud_cou">
 <table width="1600" border="4" align="center">
   <tr>
     <td colspan="30" bgcolor="#000066"><div align="left" class="style1" id="course">Course details</div></td>
@@ -109,17 +110,25 @@ else
   $sql="select * from cou";
   //$sql="select * from user_dtls U where U.emp_id in(select L.emp_id from login L where L.emp_id='admin' and L.pass='$psd')";
   $rs=mysql_query($sql) or die(mysql_error());
-  $i=mysql_num_rows($rs);
-  
+ // $i=mysql_num_rows($rs);
+//if($i>0)
+//{
+ // if($row=mysql_fetch_assoc($rs))
+  //{
   while($row=mysql_fetch_assoc($rs)){
   ?>
   <tr>
-    <td>&nbsp;<a href="student.php"><input type="button" id="c_id" value="<?php echo $row["C_Id"]; ?>" /></a> </td>
+    <td>&nbsp;<input type="submit" name="terms[]" value="<?php echo $row["C_Id"]; ?>" /> </td>
     <td>&nbsp;<?php echo $row["C_name"]; ?></td>
     <td>&nbsp;<?php echo $row["week"]; ?></td>
     <td>&nbsp;<?php echo $row["hours"]; ?></td>
   </tr>
-  <?php } ?>
+  <?php } 
+  //}
+  //else{
+  //echo "No data found"; } 
+  ?>
 </table>
+</form>
 </body>
 </html>
