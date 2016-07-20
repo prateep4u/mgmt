@@ -47,7 +47,7 @@ if($i>0)
 <div>	 
   <table width="700" border="0" align="center">
   <tr>
-    <td colspan="7" bgcolor="#000066"><div align="center" class="style1">'s details </div></td>
+    <td colspan="7" bgcolor="#000066"><div align="center" class="style1">Course-Student details </div></td>
   </tr>
   	<tr>
    	  <td width="334" bgcolor="#00FFFF"><div align="left"><span class="style4">Id:</span></div></td>

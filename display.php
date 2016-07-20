@@ -84,14 +84,14 @@ if($i>0)
 	
   </table>
 </div>
-  <?php
-  }
+<?php
+ // }
 
-}
-else
-{
- echo "no user found";
-}
+//}
+//else
+//{
+ //echo "no user found";
+//}
 ?>
 <form action="student.php" id="stud_cou">
 <table width="1600" border="4" align="center">
@@ -123,12 +123,17 @@ else
     <td>&nbsp;<?php echo $row["week"]; ?></td>
     <td>&nbsp;<?php echo $row["hours"]; ?></td>
   </tr>
-  <?php } 
-  //}
-  //else{
-  //echo "No data found"; } 
-  ?>
+  <?php }   ?>
 </table>
 </form>
+  <?php
+  }
+
+}
+else
+{
+ echo "no user found";
+}
+?>
 </body>
 </html>
